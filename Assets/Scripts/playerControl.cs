@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    // Reference to the character controller that handles our collisions and movement
     public CharacterController controller;
 
-    // Speed of the player
     public float speed = 1f;
 
     // Update is called once per frame
