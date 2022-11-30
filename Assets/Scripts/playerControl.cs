@@ -13,14 +13,13 @@ public class PlayerControl : MonoBehaviour
     {
         Vector2 currentPos = transform.position;
         Vector2 motion = Vector2.zero;
-        float shipRotate = 0.0f;
 
         float inputForward = Input.GetAxis("Vertical");
         float inputTurn = Input.GetAxis("Horizontal");
 
         motion = (transform.forward * speed * inputForward * Time.deltaTime);
 
-        controller.transform.Rotate(0, 0, shipRotate * rotateSpeed);
+        controller.transform.Rotate(0, 0, rotateSpeed);
         controller.Move(motion);
     }
 
