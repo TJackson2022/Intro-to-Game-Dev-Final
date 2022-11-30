@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
-public class BlackHoleHandler : MonoBehaviour
+public class PlayerGunHandler : MonoBehaviour
 {
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +14,5 @@ public class BlackHoleHandler : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        Destroy(other.gameObject);
     }
 }
