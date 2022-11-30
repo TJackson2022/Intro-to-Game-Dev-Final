@@ -7,6 +7,27 @@ public class PlayerControl : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 1f;
+    public float rotateSpeed = 1f;
+
+    void Update()
+    {
+        Vector2 currentPos = transform.position;
+        Vector2 motion = Vector2.zero;
+        float shipRotate = 0.0f;
+
+        float inputForward = Input.GetAxis("Vertical");
+        float inputTurn = Input.GetAxis("Horizontal");
+
+        motion = (transform.forward * speed * inputForward * Time.deltaTime);
+
+        controller.transform.Rotate(0, 0, shipRotate * rotateSpeed);
+        controller.Move(motion);
+    }
+
+    /*
+    public CharacterController controller;
+
+    public float speed = 1f;
 
     // Update is called once per frame
     void Update()
@@ -25,5 +46,5 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         
-    }
+    }*/
 }
