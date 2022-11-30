@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManger : MonoBehaviour
 {
-    public AudioSource audio;
+    public AudioSource myAudio;
     public static AudioManger Instance;
     private float defaultPitch;
     // Start is called before the first frame update
@@ -20,16 +20,16 @@ public class AudioManger : MonoBehaviour
             Instance = this;
         }
 
-        defaultPitch = audio.pitch;
+        defaultPitch = myAudio.pitch;
 
         DontDestroyOnLoad(this.gameObject);
     }
     public void PauseMusic()
     {
-        audio.pitch = 0;
+        myAudio.pitch = 0;
     }
     public void UnPauseMusic()
     {
-        audio.pitch = defaultPitch;
+        myAudio.pitch = defaultPitch;
     }
 }
