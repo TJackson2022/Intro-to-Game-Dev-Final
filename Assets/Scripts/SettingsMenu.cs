@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public float audioVolume;
-
-    // Update is called once per frame
-    void Update()
+    [SerializeField] Slider volumeSlider;
+    void Start()
     {
         
+    }
+    public void EditVolume()
+    {
+        AudioListener.volume = volumeSlider.value;
     }
 }
