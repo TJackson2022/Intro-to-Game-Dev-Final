@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
         livesStart = 0,
         livesLeft = 0;
 
+    public bool isDead;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,11 @@ public class GameManager : MonoBehaviour
     {
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
+        {
+            //GameOver();
+        }
+
+        if (isDead)
         {
             //GameOver();
         }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Shot
+  - DeathScreen
   layers:
   - Default
   - TransparentFX

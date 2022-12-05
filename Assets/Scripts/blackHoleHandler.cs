@@ -5,6 +5,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class BlackHoleHandler : MonoBehaviour
 {
+    public DeathScreenHideUntilDeath gameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,10 @@ public class BlackHoleHandler : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "Player")
+        {
+            gameOver.IsDead = true;
+        }
         Destroy(other.gameObject);
     }
 }
