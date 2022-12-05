@@ -7,10 +7,17 @@ public class EnemyControl : MonoBehaviour
     public GameObject player;
     public float moveSpeed;
     public Rigidbody rb;
-    private Vector3 movement;
     public GameObject Enemy;
 
+    private Transform target;
+    private Vector3 moveDirection;
+
     public float gravMod = 1.0f;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     private void Start()
     {
@@ -19,30 +26,23 @@ public class EnemyControl : MonoBehaviour
 
     void Update()
     {
-        Vector3 direction = player.transform.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x);// * Mathf.Rad2Deg;
-        rb.transform.Rotate(0, 0, angle);
-        direction.Normalize();
-        movement = direction;
+        if (player)
+        {
+            Vector3 direction = (player.transform.position - transform.position).normalized;
+            float angle = Mathf.Atan2(direction.y, direction.x);// * Mathf.Rad2Deg;
+            //rb.transform.Rotate(0f, 0f, angle);
+            rb.transform.LookAt(player.transform);
+            moveDirection = direction;
+        }
     }
 
     private void FixedUpdate()
     {
-        moveCharacter(movement);
+        if (player)
+        {
+            rb.velocity = new Vector3(moveDirection.x, moveDirection.y) * moveSpeed;
+        }
     }
-
-    void moveCharacter(Vector2 direction)
-    {
-        rb.MovePosition((Vector2)transform.position + direction * moveSpeed * Time.deltaTime);
-    }
-
-    //public void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Shot")
-    //    {
-    //        gravMod++;
-    //    }
-    //}
 
     public void gravIncrease()
     {
