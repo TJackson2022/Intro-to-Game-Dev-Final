@@ -13,13 +13,17 @@ public class PlayerControl : MonoBehaviour
     {
         Vector2 currentPos = transform.position;
         Vector2 motion = Vector2.zero;
+        float rotationMotion = 0;
 
         float inputForward = Input.GetAxis("Vertical");
         float inputTurn = Input.GetAxis("Horizontal");
 
-        motion = (transform.forward * speed * inputForward * Time.deltaTime);
+        rotationMotion = rotateSpeed * inputTurn * Time.deltaTime;
+        motion = (transform.right * speed * inputForward * Time.deltaTime);
 
-        controller.transform.Rotate(0, 0, rotateSpeed);
+        //this.gameObject.transform.GetChild(0).transform.Rotate(0, 0, rotationMotion);
+        controller.transform.Rotate(0, 0, -rotationMotion);
+        //this.Firepoint.transform.Rotate(0, 0, rotationMotion);
         controller.Move(motion);
     }
 

@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooter : MonoBehaviour
+public class PlayerGunHandler : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject bullet;
+    public GameObject shotPrefab;
     public AudioSource Gunshot;
 
     void Update()
     {
-        if (Input.GetKeyDown("s"))
+        if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
@@ -19,7 +19,7 @@ public class Shooter : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bullet, firePoint.position, firePoint.rotation);
-        Gunshot.Play();
+        Instantiate(shotPrefab, firePoint.position, firePoint.rotation);
+        //Gunshot.Play();
     }
 }
