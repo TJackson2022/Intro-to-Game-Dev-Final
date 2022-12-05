@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.064270385, g: 0.047498487, b: 0.08011671, a: 1}
+  m_IndirectSpecularColor: {r: 0.07871521, g: 0.057959236, b: 0.096761726, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1080,6 +1080,7 @@ MonoBehaviour:
   timeLeft: 0
   livesStart: 0
   livesLeft: 0
+  isDead: 0
 --- !u!82 &701107149
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1438,7 +1439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDead: 0
-  DeathScreen: {fileID: 0}
+  DeathScreen: {fileID: 718446550}
 --- !u!1 &728958450
 GameObject:
   m_ObjectHideFlags: 0
