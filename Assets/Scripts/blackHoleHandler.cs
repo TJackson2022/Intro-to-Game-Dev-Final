@@ -24,6 +24,7 @@ public class BlackHoleHandler : MonoBehaviour
         if (other.tag == "Player")
         {
             gameOver.IsDead = true;
+            Debug.Log("IsDead is true");
         }
         Destroy(other.gameObject);
     }

@@ -6,6 +6,7 @@ public class PlayerShotHandler : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody rb;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +24,6 @@ public class PlayerShotHandler : MonoBehaviour
             enemy.gravIncrease();
         }
         Destroy(gameObject);
+        Debug.Log("DestroyedBullet");
     }
 }

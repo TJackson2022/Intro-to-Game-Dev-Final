@@ -20,6 +20,6 @@ public class PlayerGunHandler : MonoBehaviour
     void Shoot()
     {
         Instantiate(shotPrefab, firePoint.position, firePoint.rotation);
-        //Gunshot.Play();
+        Gunshot.Play();
     }
 }

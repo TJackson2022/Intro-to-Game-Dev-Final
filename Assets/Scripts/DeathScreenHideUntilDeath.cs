@@ -5,19 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class DeathScreenHideUntilDeath : MonoBehaviour
 {
+    public static AudioSource myAudio;
+    public static AudioManger Instance;
+    private float defaultPitch;
     public bool IsDead;
     public GameObject DeathScreen;
     void Start()
     {
         DeathScreen.SetActive(false);
+        
     }
-
+    
+ 
     // Update is called once per frame
     void Update()
     {
         if (IsDead == true)
         {
+            Debug.Log("Recieved IsDead message");
             DeathScreen.SetActive(true);
         }
-    }
+ 
+}
+
 }
