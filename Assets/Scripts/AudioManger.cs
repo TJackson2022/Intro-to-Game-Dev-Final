@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManger : MonoBehaviour
 {
-    
+    public bool isDead;
     public static AudioSource myAudio;
     public static AudioManger Instance;
     private float defaultPitch;
@@ -14,11 +14,11 @@ public class AudioManger : MonoBehaviour
         // protects against two songs playing at once when coming back into the game from the main menu
         if (Instance != null)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
         else
         {
-            Instance = this;
+            //Instance = this;
         }
 
         
@@ -33,4 +33,5 @@ public class AudioManger : MonoBehaviour
     {
         myAudio.pitch = defaultPitch;
     }
+   
 }
