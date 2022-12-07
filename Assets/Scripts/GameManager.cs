@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public float scoreTotal = 0,
-        scoreCurrent = 0,
-        timeLeft = 0,
-        livesStart = 0,
-        livesLeft = 0;
+    public float scoreTotal = 0f,
+        scoreCurrent = 0f,
+        timeLeft = 0f,
+        livesStart = 0f,
+        livesLeft = 0f;
 
     public bool isDead;
 

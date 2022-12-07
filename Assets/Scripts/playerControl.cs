@@ -5,9 +5,15 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public CharacterController controller;
+    public GameObject exhaust;
 
     public float speed = 1f;
     public float rotateSpeed = 1f;
+
+    private void Start()
+    {
+        exhaust.SetActive(false);
+    }
 
     void Update()
     {
@@ -17,6 +23,15 @@ public class PlayerControl : MonoBehaviour
 
         float inputForward = Input.GetAxis("Vertical");
         float inputTurn = Input.GetAxis("Horizontal");
+
+        if (inputForward != 0)
+        {
+            exhaust.SetActive(true);
+        }
+        else
+        {
+            exhaust.SetActive(false);
+        }
 
         rotationMotion = rotateSpeed * inputTurn * Time.deltaTime;
         motion = (transform.right * speed * inputForward * Time.deltaTime);
