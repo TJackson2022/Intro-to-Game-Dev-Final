@@ -12,7 +12,7 @@ public class PlayerShotHandler : MonoBehaviour
     void Start()
     {
         Debug.Log("Shot fired!");
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, 5f);
         rb.velocity = transform.right * speed;
     }
 
