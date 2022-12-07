@@ -10,6 +10,8 @@ public class PlayerControl : MonoBehaviour
     public float speed = 1f;
     public float rotateSpeed = 1f;
 
+    public float health = 5f;
+
     private void Start()
     {
         exhaust.SetActive(false);
@@ -40,6 +42,11 @@ public class PlayerControl : MonoBehaviour
         controller.transform.Rotate(0, 0, -rotationMotion);
         //this.Firepoint.transform.Rotate(0, 0, rotationMotion);
         controller.Move(motion);
+    }
+
+    public void healthDecrease()
+    {
+        health--;
     }
 
     /*
