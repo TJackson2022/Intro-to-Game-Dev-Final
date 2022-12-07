@@ -9,7 +9,7 @@ public class BlackHoleHandler : MonoBehaviour
     public DeathScreenHideUntilDeath gameOver;
     static int Killed = 0;
     public TextMeshProUGUI enemiesKilled;
-
+    public AudioSource Explosion;
     private UnityEngine.Object explosionRef;
 
     void Start()
@@ -43,6 +43,7 @@ public class BlackHoleHandler : MonoBehaviour
 
             Killed++;
             enemiesKilled.text = Killed.ToString();
+            Explosion.Play();
         }
 
     }

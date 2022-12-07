@@ -29,7 +29,7 @@ public class DeathScreenHideUntilDeath : MonoBehaviour
             DeathScreen.SetActive(true);
             //AudioListener.volume = 0f;
             Time.timeScale = 0f;
-            //AudioManager.SetActive(false);
+            AudioManager.SetActive(false);
             new WaitForSeconds(1);
             //deadMusic.Play();
             //Debug.Log("PlayedDeathMusic");
