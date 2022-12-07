@@ -6,9 +6,12 @@ public class GameManager : MonoBehaviour
 {
     public float scoreTotal = 0f,
         scoreCurrent = 0f,
-        timeLeft = 0f,
-        livesStart = 0f,
-        livesLeft = 0f;
+        timeStart = 60f,
+        timeLeft = 60f,
+        livesStart = 5f,
+        livesLeft = 5f;
+
+    public GameObject deathScreen;
 
     public bool isDead;
 
@@ -16,14 +19,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Level 1
-        // Set score current and total to 0
-        // Set time left to 60, or w/e
-        // Set lives left to lives start
-
-        // Spawn player
-        // Wait few seconds
-        // Begin spawning in enemies
-
 
     }
 
@@ -33,12 +28,34 @@ public class GameManager : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
         {
-            //GameOver();
+            GameOver();
         }
 
-        if (isDead)
+        if (livesLeft == 0)
         {
-            //GameOver();
+            GameOver();
         }
+    }
+
+    public void GameOver()
+    {
+        deathScreen.SetActive(true);
+        Time.timeScale = 0f;
+        AudioListener.volume = 0f;
+    }
+
+    public void ToggleIsDead()
+    {
+        isDead = !isDead;
+    }
+
+    public void ScoreIncrease()
+    {
+        scoreCurrent++;
+    }
+
+    public void LoseLife()
+    {
+        livesLeft--;
     }
 }
