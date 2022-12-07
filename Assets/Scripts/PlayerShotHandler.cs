@@ -12,6 +12,7 @@ public class PlayerShotHandler : MonoBehaviour
     void Start()
     {
         Debug.Log("Shot fired!");
+        Destroy(gameObject, 10f);
         rb.velocity = transform.right * speed;
     }
 
@@ -19,14 +20,14 @@ public class PlayerShotHandler : MonoBehaviour
     {
         Debug.Log("Shot Hit!");
 
-        shotHit.Play();
+        //shotHit.Play();
 
         EnemyControl enemy = collision.GetComponent<EnemyControl>();
         if (enemy != null)
         {
             enemy.gravIncrease();
         }
-        Destroy(gameObject, 10f);
+        Destroy(gameObject);
         Debug.Log("DestroyedBullet");
     }
 }

@@ -9,6 +9,7 @@ public class EnemyControl : MonoBehaviour
     public Rigidbody rb;
     public GameObject Enemy;
 
+    private UnityEngine.Object explosionRef;
     private Transform target;
     private Vector3 moveDirection;
 
@@ -17,6 +18,8 @@ public class EnemyControl : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+
+        explosionRef = Resources.Load("Explosion");
     }
 
     private void Start()
