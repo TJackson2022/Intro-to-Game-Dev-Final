@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10697969, g: 0.17492315, b: 0.12199762, a: 1}
+  m_IndirectSpecularColor: {r: 0.09791615, g: 0.16263136, b: 0.11309431, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1247,6 +1247,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 1337695747}
   volumeSlider: 0
   isPaused: 0
+  enemiesKilled: {fileID: 0}
 --- !u!114 &863783849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1899,8 +1900,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1288372646}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: LoadLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2065,10 +2066,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1288372641}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8841d9f5617a292438f59f80ec39aad8, type: 3}
+  m_Script: {fileID: 11500000, guid: fe8d7c7d7f03276498a003bee95db59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
   volumeSlider: 0
+  isPaused: 0
+  enemiesKilled: {fileID: 802553643}
 --- !u!1 &1289335434
 GameObject:
   m_ObjectHideFlags: 0

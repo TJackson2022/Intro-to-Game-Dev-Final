@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenu;
     public float volumeSlider;
     public bool isPaused = false;
+    public TextMeshProUGUI enemiesKilled;
+    static int killed = 0;
     void Start()
     {
         Time.timeScale = 1f;
@@ -45,7 +47,17 @@ public class PauseMenu : MonoBehaviour
     }
     public void LoadLevel(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        if (null == enemiesKilled)
+        {
+            Debug.Log("Aleady at 0");
+            SceneManager.LoadScene(sceneName);
+        }
+        else
+        {
+            enemiesKilled.text = killed.ToString();
+            SceneManager.LoadScene(sceneName);
+        }
+
 
 
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.024067663, g: 0.019898366, b: 0.030926613, a: 1}
+  m_IndirectSpecularColor: {r: 0.02892194, g: 0.022317247, b: 0.037766892, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -846,6 +846,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 31562187}
   volumeSlider: 0
   isPaused: 0
+  enemiesKilled: {fileID: 1292539659}
 --- !u!1001 &344031000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1074,7 +1075,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDead: 0
   DeathScreen: {fileID: 718446550}
-  deadMusic: {fileID: 733203955}
   AudioManager: {fileID: 1953242370}
 --- !u!4 &562488795
 Transform:
@@ -2183,6 +2183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 562488794}
+  enemiesKilled: {fileID: 1292539659}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3064,7 +3065,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDead: 0
   DeathScreen: {fileID: 718446550}
-  deadMusic: {fileID: 0}
   AudioManager: {fileID: 0}
 --- !u!1 &1621476479
 GameObject:

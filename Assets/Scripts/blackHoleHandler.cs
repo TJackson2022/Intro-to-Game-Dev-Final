@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using TMPro;
 
 public class BlackHoleHandler : MonoBehaviour
 {
     public DeathScreenHideUntilDeath gameOver;
-
-    // Start is called before the first frame update
+    static int Killed = 0;
+    public TextMeshProUGUI enemiesKilled;
     void Start()
     {
         
@@ -18,7 +19,7 @@ public class BlackHoleHandler : MonoBehaviour
     {
         
     }
-
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -27,5 +28,13 @@ public class BlackHoleHandler : MonoBehaviour
             Debug.Log("IsDead is true");
         }
         Destroy(other.gameObject);
+        if (other.tag == "Enemy")
+        {
+            Debug.Log("Enemy kill");
+            Killed++;
+            enemiesKilled.text = Killed.ToString();
+        }
+
     }
+  
 }

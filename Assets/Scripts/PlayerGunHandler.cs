@@ -21,7 +21,7 @@ public class PlayerGunHandler : MonoBehaviour
     {
         Instantiate(shotPrefab, firePoint.position, firePoint.rotation);
         Gunshot.Play();
-        PlayerPrefs.DeleteAll();
-        Debug.Log("Player Preferences delelted");
+        //PlayerPrefs.DeleteAll();
+       // Debug.Log("Player Preferences delelted");
     }
 }
