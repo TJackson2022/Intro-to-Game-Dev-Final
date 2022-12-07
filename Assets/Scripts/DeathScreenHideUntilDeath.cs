@@ -10,7 +10,7 @@ public class DeathScreenHideUntilDeath : MonoBehaviour
     private float defaultPitch;
     public bool IsDead;
     public GameObject DeathScreen;
-    public AudioSource deadMusic;
+   
     public GameObject AudioManager;
     void Start()
     {
@@ -31,8 +31,8 @@ public class DeathScreenHideUntilDeath : MonoBehaviour
             Time.timeScale = 0f;
             AudioManager.SetActive(false);
             new WaitForSeconds(1);
-            deadMusic.Play();
-            Debug.Log("PlayedDeathMusic");
+            //deadMusic.Play();
+            //Debug.Log("PlayedDeathMusic");
         }
 
  

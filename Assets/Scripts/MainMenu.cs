@@ -6,7 +6,16 @@ using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-public void ExitGame()
+    public float volumeSlider;
+    void Start()
+    {
+        if (!PlayerPrefs.HasKey("musicVolume"))
+        {
+            PlayerPrefs.SetFloat("musicVolume", 1);
+            load();
+        }
+    }
+    public void ExitGame()
     {
         Debug.Log("Quit");
         Application.Quit();
@@ -14,5 +23,9 @@ public void ExitGame()
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+    private void load()
+    {
+        volumeSlider = PlayerPrefs.GetFloat("musicVolume");
     }
 }
