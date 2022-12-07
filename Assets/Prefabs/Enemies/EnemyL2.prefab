@@ -314,7 +314,7 @@ MonoBehaviour:
   firePoint: {fileID: 5546228488215392428}
   shotPrefab: {fileID: 6284340086322154176, guid: b29d0cae06d97c54c95040f57a412f0b, type: 3}
   Gunshot: {fileID: -1789824638308312643}
-  timeBetweenShots: 5
+  timeBetweenShots: 3
 --- !u!82 &-1789824638308312643
 AudioSource:
   m_ObjectHideFlags: 0
