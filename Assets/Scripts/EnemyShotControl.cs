@@ -12,15 +12,15 @@ public class EnemyShotControl : MonoBehaviour
     void Start()
     {
         Debug.Log("Shot fired!");
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 10f);
         rb.velocity = transform.right * speed;
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collider)
     {
         Debug.Log("Shot Hit!");
 
-        PlayerControl player = collision.GetComponent<PlayerControl>();
+        PlayerControl player = collider.gameObject.GetComponent<PlayerControl>();
         if (player != null)
         {
             player.healthDecrease();
