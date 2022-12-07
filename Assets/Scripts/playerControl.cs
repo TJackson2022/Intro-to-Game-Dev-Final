@@ -7,6 +7,8 @@ public class PlayerControl : MonoBehaviour
     public CharacterController controller;
     public GameObject exhaust;
 
+    public DeathScreenHideUntilDeath gameOver;
+
     public float speed = 1f;
     public float rotateSpeed = 1f;
 
@@ -47,6 +49,13 @@ public class PlayerControl : MonoBehaviour
     public void healthDecrease()
     {
         health--;
+        Debug.Log("Health: " + health);
+
+        if (health <= 0)
+        {
+            gameOver.IsDead = true;
+            Debug.Log("IsDead is true");
+        }
     }
 
     /*

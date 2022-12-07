@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 528ce85813e349c42a4ffb395757d511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8303468068155637647, guid: 528d394d33189a5479c7c46762bcaeb9, type: 3}
+  player: {fileID: 8303468068155637644, guid: 528d394d33189a5479c7c46762bcaeb9, type: 3}
   moveSpeed: 1
   rb: {fileID: 5546228489120735855}
   Enemy: {fileID: 5546228489120735826}
@@ -296,9 +296,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.15890364
-  m_Height: 0.61914384
+  m_Height: 0.5610957
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -0.029024065}
 --- !u!114 &6860267518026251977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 5546228488215392428}
-  shotPrefab: {fileID: 6284340086322154176, guid: b29d0cae06d97c54c95040f57a412f0b, type: 3}
+  shotPrefab: {fileID: 6284340086322154176, guid: 4627eab79d89be54b9d570c824813abd, type: 3}
   Gunshot: {fileID: 2686785865664697123}
   timeBetweenShots: 5
 --- !u!82 &2686785865664697123
