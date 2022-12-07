@@ -5,9 +5,11 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    public VictoryScript won;
     public TextMeshProUGUI timer;
     public float TimeLeft;
     public bool TimerIsOn = false;
+    public bool isWon;
     void Start()
     {
         TimerIsOn = true;
@@ -28,6 +30,7 @@ public class Timer : MonoBehaviour
             {
                 Debug.Log("Timer is Done");
                 TimeLeft = 0;
+                won.isWon = true;
                 TimerIsOn = false;
             }
         }

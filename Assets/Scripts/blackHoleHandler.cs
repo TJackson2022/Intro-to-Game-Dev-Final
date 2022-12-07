@@ -6,6 +6,8 @@ using TMPro;
 
 public class BlackHoleHandler : MonoBehaviour
 {
+    public VictoryScript w;
+    public TextMeshProUGUI vickills;
     public DeathScreenHideUntilDeath gameOver;
     static int Killed = 0;
     public TextMeshProUGUI enemiesKilled;
@@ -42,6 +44,7 @@ public class BlackHoleHandler : MonoBehaviour
             Destroy(explosion, 5f);
 
             Killed++;
+            vickills.text = Killed.ToString();
             enemiesKilled.text = Killed.ToString();
             Explosion.Play();
         }
