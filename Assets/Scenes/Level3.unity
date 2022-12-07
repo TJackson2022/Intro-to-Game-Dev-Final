@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.122384645, g: 0.019418878, b: 0.023395056, a: 1}
+  m_IndirectSpecularColor: {r: 0.122941665, g: 0.019654278, b: 0.023656588, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8d7c7d7f03276498a003bee95db59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 31562187}
+  pauseMenu: {fileID: 320112621}
   volumeSlider: 0
   isPaused: 0
   enemiesKilled: {fileID: 1292539659}

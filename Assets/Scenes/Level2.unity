@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.10685726, g: 0.17466831, b: 0.12184925, a: 1}
+  m_IndirectSpecularColor: {r: 0.10347866, g: 0.16996938, b: 0.11854113, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2248,6 +2248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0887ae9670cfac441878ff20e036aeb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  w: {fileID: 919054219}
+  vickills: {fileID: 0}
   gameOver: {fileID: 562488794}
   enemiesKilled: {fileID: 1292539659}
   Explosion: {fileID: 824799923}
@@ -2504,7 +2506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   won: {fileID: 919054219}
   timer: {fileID: 653694976}
-  TimeLeft: 5
+  TimeLeft: 30
   TimerIsOn: 0
   isWon: 0
 --- !u!4 &931340487
