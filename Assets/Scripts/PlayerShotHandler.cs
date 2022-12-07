@@ -20,12 +20,11 @@ public class PlayerShotHandler : MonoBehaviour
     {
         Debug.Log("Shot Hit!");
 
-        //shotHit.Play();
-
         EnemyControl enemy = collision.GetComponent<EnemyControl>();
         if (enemy != null)
         {
             enemy.gravIncrease();
+            shotHit.Play();
         }
         Destroy(gameObject);
         Debug.Log("DestroyedBullet");

@@ -26,9 +26,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         timeLeft -= Time.deltaTime;
-        if (timeLeft < 0)
+        if (timeLeft <= 0)
         {
-            GameOver();
+            // Go next level
         }
 
         if (livesLeft == 0)

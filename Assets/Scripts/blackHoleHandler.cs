@@ -32,13 +32,15 @@ public class BlackHoleHandler : MonoBehaviour
         }
 
         Destroy(other.gameObject);
-        GameObject explosion = (GameObject)Instantiate(explosionRef);
-        explosion.transform.position = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
-
+        
         if (other.tag == "Enemy")
         {
             Debug.Log("Enemy kill");
-            
+
+            GameObject explosion = (GameObject)Instantiate(explosionRef);
+            explosion.transform.position = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
+            Destroy(explosion, 5f);
+
             Killed++;
             enemiesKilled.text = Killed.ToString();
         }
