@@ -2916,6 +2916,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4269298045877186167, guid: 528d394d33189a5479c7c46762bcaeb9, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 562488794}
     - target: {fileID: 82103212714741680, guid: 528d394d33189a5479c7c46762bcaeb9, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
